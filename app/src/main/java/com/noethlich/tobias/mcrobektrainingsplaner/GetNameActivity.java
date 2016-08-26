@@ -31,8 +31,8 @@ public class GetNameActivity extends AppCompatActivity {
 
     public void saveName(){
 
-        EditText feld = (EditText) findViewById(R.id.codeField);
-        String name = feld.getText().toString();
+        EditText editText = (EditText) findViewById(R.id.codeField);
+        String name = editText.getText().toString();
 
         SharedPreferences settings;
         SharedPreferences.Editor editor;

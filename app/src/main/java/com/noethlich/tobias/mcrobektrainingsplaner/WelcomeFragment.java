@@ -1,7 +1,6 @@
 package com.noethlich.tobias.mcrobektrainingsplaner;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,11 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link WelcomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class WelcomeFragment extends Fragment implements View.OnClickListener {
 
     public WelcomeFragment() {

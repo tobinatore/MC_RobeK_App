@@ -30,7 +30,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
     // Contacts Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
-    private static final String KEY_SK = "schlagkombo";
+    private static final String KEY_SK = "schlagkom";
 
     Context con;
 
@@ -62,7 +62,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
      * All CRUD(Create, Read, Update, Delete) Operations
      */
 
-    // Training hinzufügen
+    // add Training
     void addTraining(Training training) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -76,7 +76,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         db.close(); // Verbindung schließen
     }
 
-    // Training abrufen
+    // get Training
     Training getTraining(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Training training;
@@ -99,7 +99,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         return training;
     }
 
-    // all Trainings abrufen
+    // get all Trainings
     public List<Training> getAllTrainings() {
         List<Training> trainingList = new ArrayList<Training>();
         // Select All Query
@@ -108,14 +108,14 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        // alle Reihen zur Liste hinzufügen
+        // add all rows to the list
         if (cursor.moveToFirst()) {
             do {
                 Training training = new Training();
                 training.setID(Integer.parseInt(cursor.getString(0)));
                 training.setName(cursor.getString(1));
                 training.setKombo(cursor.getLong(2));
-                // training zur Liste hinzufügen
+                // add Training to list
                 trainingList.add(training);
             } while (cursor.moveToNext());
         }
@@ -124,7 +124,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         return trainingList;
     }
 
-    // einzelnes Training bearbeiten
+    // update a single training
     public int updateTraining(Training training) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -132,12 +132,12 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         values.put(KEY_NAME, training.getName());
         values.put(KEY_SK, training.getKombo());
 
-        // Reihe aktualisieren
+        // update the row
         return db.update(TABLE_TRAININGS, values, KEY_ID + " = ?",
                 new String[] { String.valueOf(training.getID()) });
     }
 
-    // Training löschen
+    // delete Training
     public void deleteTraining(Integer id) {
        // int id = training.getID();
         SQLiteDatabase db = this.getWritableDatabase();
@@ -147,7 +147,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
     }
 
 
-    // Gesamtzahl der gespeicherten Trainings
+    // sum of all Trainings
     public int getTrainingCount() {
         String countQuery = "SELECT  * FROM " + TABLE_TRAININGS;
         SQLiteDatabase db = this.getReadableDatabase();

@@ -24,7 +24,7 @@ public class ZufallsFragment extends Fragment implements View.OnClickListener {
     ArrayList<Integer> exercise = new ArrayList<>();
 
     NumberPicker punches;
-    CheckBox check_jab, check_haken, check_aufwärtshaken, check_cross, check_block, check_wiederholen;
+    CheckBox check_jab, check_haken, check_aufwärtshaken, check_cross, check_block;
 
     Random randomizer = new Random();
 
@@ -149,14 +149,14 @@ public class ZufallsFragment extends Fragment implements View.OnClickListener {
             Snackbar.make(getView(),"Keinen Context gefunden...",Snackbar.LENGTH_LONG);
         }
 
-        long schlagfolge = exercise.get(0);
+        long combo = exercise.get(0);
         for(int i = 1; i < exercise.size(); i++) {
-            schlagfolge *= 10;
-            schlagfolge += exercise.get(i);
+            combo *= 10;
+            combo += exercise.get(i);
 
         }
 
-        db.addTraining(new Training(id, "Zufallstraining",schlagfolge));
+        db.addTraining(new Training(id, "Zufallstraining",combo));
         exercise.clear();
 
 

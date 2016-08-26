@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
     ArrayList<Boolean> activatedButtons = new ArrayList<>();
 
     String name;
-    MenuItem fertig, delete;
+    MenuItem finished, delete;
     DatabaseHandler db = new DatabaseHandler(this);
 
     ButtonCheck bc = new ButtonCheck();
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity
             name_text.setText("Hallo " + name + "!");
         }
         getMenuInflater().inflate(R.menu.main, menu);
-        fertig = menu.findItem(R.id.action_finish);
+        finished = menu.findItem(R.id.action_finish);
         delete = menu.findItem(R.id.action_delete);
         return true;
     }
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
             final EditText txtUrl = new EditText(this);
 
             // Sets the hint to a randomly generated example
-            txtUrl.setHint(generiereBeispiel());
+            txtUrl.setHint(generateExample());
 
 
             new AlertDialog.Builder(this)
@@ -147,33 +147,33 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_training:
 
                 fragment = new TrainingFragment();
-                fertig.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+                finished.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
                 delete.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 break;
             case R.id.nav_wahl:
 
                 fragment = new WahlFragment();
-                fertig.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
+                finished.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 delete.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
                 break;
             case R.id.nav_random:
 
                 fragment = new ZufallsFragment();
-                fertig.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
+                finished.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 delete.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 break;
             case R.id.nav_settings:
 
                 fragment = new EinstellungenFragment();
-                fertig.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
+                finished.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
 
                 break;
             case R.id.nav_share:
 
                 fragment = new CodeFragment();
 
-                fertig.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
+                finished.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 delete.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
                 break;
         }
@@ -255,14 +255,14 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        long schlagfolge = orders.get(0);
+        long combo = orders.get(0);
         for(int i = 1; i < orders.size(); i++) {
-            schlagfolge *= 10;
-            schlagfolge += orders.get(i);
+            combo *= 10;
+            combo += orders.get(i);
 
         }
 
-        db.addTraining(new Training(id, name,schlagfolge));
+        db.addTraining(new Training(id, name,combo));
         orders.clear();
 
 
@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity
         editor.apply();
         }
 
-    public String generiereBeispiel(){
+    public String generateExample(){
         String[] punches = {"Jab", "Haken", "Aufwärtshaken", "Block", "Cross"};
         String[] description = {"Hartes", "Lohnendes", "Starkes", "Anstrengendes", "Spannendes"};
         String[] activity = {"Training", "Workout", "Programm", "Trimmen", "Üben"};
