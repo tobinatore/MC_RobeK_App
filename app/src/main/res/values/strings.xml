@@ -1,0 +1,23 @@
+<resources>
+    <item name="status" type="id" />
+    <item name="training_id" type="id" />
+
+    <string-array name="spinner_array">
+        <item>Standard</item>
+        <item>Training erstellen</item>
+        <item>Training auswählen</item>
+        <item>Zufallstraining</item>
+        <item>Einstellungen</item>
+        <item>Code eingeben</item>
+
+    </string-array>
+
+    <string name="app_name">MC RoBeK Trainingsplaner</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

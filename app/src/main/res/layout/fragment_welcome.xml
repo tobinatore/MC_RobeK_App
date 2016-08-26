@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noethlich.tobias.mcrobektrainingsplaner.EinstellungenFragment"
+    android:background="@color/colorBackground"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:id="@+id/imageView2"
+        android:layout_gravity="left|top"
+        android:src="@drawable/arrow"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/textView5" />
+
+    <TextView
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Einfach nach rechts wischen oder das Menü per Tap öffnen, schon kann&apos;s losgehen!"
+        android:id="@+id/textView5"
+        android:layout_gravity="center_horizontal|top"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:text="Anderen Startschirm?"
+        android:id="@+id/button_einst"
+        android:layout_gravity="center"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_border"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

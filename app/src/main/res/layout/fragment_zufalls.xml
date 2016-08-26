@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noethlich.tobias.mcrobektrainingsplaner.ZufallsFragment"
+    android:background="@color/colorBackground">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Zu verwendende Schläge:"
+            android:id="@+id/textView3"
+            android:textColor="@color/colorWhite" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jab"
+            android:id="@+id/checkBox_jab"
+            android:textColor="@color/colorWhite"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haken"
+            android:id="@+id/checkBox_haken"
+            android:textColor="@color/colorWhite"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aufwärtshaken"
+            android:id="@+id/checkBox_aufwärtshaken"
+            android:textColor="@color/colorWhite"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cross"
+            android:id="@+id/checkBox_cross"
+            android:textColor="@color/colorWhite"
+            android:checked="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.24" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blocken?"
+            android:id="@+id/checkBox_block"
+            android:textColor="@color/colorWhite"
+            android:checked="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Anzahl der Schläge:"
+            android:id="@+id/textView4"
+            android:textColor="@color/colorWhite" />
+
+        <NumberPicker
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberPicker"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/colorToolbar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.43" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Los geht&apos;s"
+            android:id="@+id/button_ok_random"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_border"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_training"
+            android:icon="@drawable/training"
+            android:title="Training erstellen" />
+        <item
+            android:id="@+id/nav_wahl"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Training auswählen" />
+        <item
+            android:id="@+id/nav_random"
+            android:icon="@drawable/random"
+            android:title="Zufallsprogramm" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Einstellungen" />
+    </group>
+
+    <item android:title="Kommunikation">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="MC RoBeK Code eingeben" />
+        </menu>
+    </item>
+
+</menu>

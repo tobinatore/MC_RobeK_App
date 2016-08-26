@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingFragment"
+    android:columnOrderPreserved="false"
+    android:columnCount="8"
+    android:background="@color/colorBackground">
+
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Jab Rechts"
+        android:id="@+id/jab_r"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Block"
+        android:id="@+id/block"
+        android:layout_gravity="right|top"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Haken Links"
+        android:id="@+id/haken_l"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Haken rechts"
+        android:id="@+id/haken_r"
+        android:layout_gravity="center"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Cross Rechts"
+        android:id="@+id/cross_r"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Aufwärts-   haken Links"
+        android:id="@+id/aufwärtshaken_l"
+        android:layout_gravity="left|bottom"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Aufwärts-   haken Rechts"
+        android:id="@+id/aufwärtshaken_r"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Cross Links"
+        android:id="@+id/cross_l"
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/button_border"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:text="Jab links"
+        android:id="@+id/jab_l"
+        android:layout_gravity="left|top"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_border" />
+
+</FrameLayout>
