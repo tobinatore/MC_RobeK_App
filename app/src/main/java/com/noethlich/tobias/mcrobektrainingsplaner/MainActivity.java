@@ -28,8 +28,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Interface {
 
-    public static final String PREFS_NAME = "AOP_PREFS";
-    public static final String PREFS_KEY = "AOP_PREFS_String";
+    public static final String PREFS_NAME = "MRTP_PREFS";
+    public static final String PREFS_KEY = "MRTP_PREFS_String";
 
     ArrayList<Integer> orders = new ArrayList<>();
     ArrayList<Integer> deleted = new ArrayList<>();

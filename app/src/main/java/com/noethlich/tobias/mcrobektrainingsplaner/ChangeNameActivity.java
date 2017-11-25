@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class ChangeNameActivity extends AppCompatActivity {
-    public static final String PREFS_NAME = "AOP_PREFS";
-    public static final String PREFS_KEY = "AOP_PREFS_String";
+    public static final String PREFS_NAME = "MRTP_PREFS";
+    public static final String PREFS_KEY = "MRTP_PREFS_String";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
